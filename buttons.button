@@ -1,0 +1,30 @@
+pio 0 BUTTON_PLAY
+pio 1 BUTTON_VOL_DOWN
+pio 2 BUTTON_VOL_UP
+pio 3 BUTTON_PREV
+pio 4 BUTTON_NEXT
+
+debounce 2 20
+
+message PLAY
+    BUTTON_PLAY release
+
+message VOL_DOWN
+    BUTTON_VOL_DOWN ~BUTTON_VOL_UP enter
+    BUTTON_VOL_DOWN ~BUTTON_VOL_UP repeat 500
+
+message VOL_UP
+    BUTTON_VOL_UP ~BUTTON_VOL_DOWN enter
+    BUTTON_VOL_UP ~BUTTON_VOL_DOWN repeat 500
+
+message MUTE_ON
+    BUTTON_VOL_UP BUTTON_VOL_DOWN enter
+
+message MUTE_OFF
+    BUTTON_VOL_UP BUTTON_VOL_DOWN release
+
+message PLAY_PREV
+    BUTTON_PREV release
+
+message PLAY_NEXT
+    BUTTON_NEXT release

@@ -1,0 +1,14 @@
+buttons.release.mak
+buttons.app
+buttons.c
+buttons.dbg
+buttons.h
+buttons.map
+buttons.o
+buttons.sym
+buttons.xap
+depend/buttons
+depend/flags.compile
+depend/flags.link
+depend/main
+main.o
